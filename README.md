@@ -9,7 +9,7 @@ L'installation du serveur se base sur une Ubuntu 12.04
 
 Pour lancer l'installation :
 
-* wget https://raw.github.com/leblanc-simon/OpenInstallServer/master/get.sh -q -O - | sh
+* wget https://raw.github.com/framasoft/OpenInstallServer/master/get.sh -q -O - | sh
 * cd /root/travaux/install
 * ./install.sh [-w] [-o]
 * (répondre aux questions)
