@@ -16,7 +16,7 @@ if [ $? -ne 0 ]; then
     exit 3
 fi
 
-git clone https://github.com/leblanc-simon/OpenInstallServer.git /root/travaux
+git clone https://github.com/framasoft/OpenInstallServer.git /root/travaux
 if [ $? -ne 0 ]; then
     echo "Impossible de recuperer OpenInstallServer"
     exit 4
