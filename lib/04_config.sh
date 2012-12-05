@@ -337,7 +337,7 @@ function update_cron_for()
 {
     local basedir="$1"
     
-    ls ${basedir}/* 2&>1 > /dev/null
+    ls ${basedir}/* 2>&1 > /dev/null
     if [ $? -ne 0 ]; then
         # Il n'y a pas de fichier à copier
         return 0
