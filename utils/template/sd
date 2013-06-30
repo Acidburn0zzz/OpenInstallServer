@@ -1,15 +1,13 @@
 <VirtualHost *:80>
-    ServerAdmin   contact@%%domain%%
-    ServerAlias   *.%%domain%%
+    ServerAdmin   contact@%%base_website%%
+    ServerAlias   %%sd_website%%.%%base_website%%
 
     SuexecUserGroup %%user%% %%user%%
     
     DirectoryIndex index.php
-    VirtualDocumentRoot /home/%%user%%/sd/%1/www/
+    DocumentRoot /home/%%user%%/sd/%%sd_website%%/www/
     
-    UseCanonicalName Off
-    
-    <Directory /home/%%user%%/sd>
+    <Directory /home/%%user%%/sd/%%sd_website%%/www>
         Options -Indexes FollowSymLinks -MultiViews
         AllowOverride All
         Order allow,deny
@@ -17,7 +15,6 @@
     </Directory>
 
     LogLevel warn
-    ErrorLog ${APACHE_LOG_DIR}/sd.%%domain%%.error.log
-    CustomLog ${APACHE_LOG_DIR}/sd.%%domain%%.access.log combined
+    ErrorLog ${APACHE_LOG_DIR}/%%sd_website%%.%%base_website%%.error.log
+    CustomLog ${APACHE_LOG_DIR}/%%sd_website%%.%%base_website%%.access.log combined
 </VirtualHost>
-
